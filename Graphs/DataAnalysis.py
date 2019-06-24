@@ -62,7 +62,7 @@ data = pd.read_csv("PlotData/amount.csv")
 dataArima = data.loc[data['Algorithm'] == 'ARIMA']
 dataRZ = data.loc[data['Algorithm'] == 'RZ']
 dataNN = data.loc[data['Algorithm'] == 'NN']
-#aggregation congested
+#aggregation congeste
 plt.figure(figsize=(10,7)) # 10 is width, 7 is height
 plt.plot(data['Amount'].unique(),dataArima['NRMSE'].loc[dataArima['Scenario'] == "Con"], 'c', label='ARIMA')
 plt.plot(data['Amount'].unique(),dataRZ['NRMSE'].loc[dataRZ['Scenario'] == "Con"], 'm', label='RZ')
